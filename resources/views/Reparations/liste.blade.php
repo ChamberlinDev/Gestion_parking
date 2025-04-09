@@ -37,8 +37,8 @@
       <td>{{ $reparation->type_panne }}</td>
       <td>{{ $reparation->montant }}</td>
       <td>
-      <a class="btn btn-warning">Modifier</a>
-      <a class="btn btn-danger">Supprimer</a>
+      <a class="btn btn-warning"><i class="bi bi-pencil"></i></a>
+      <a class="btn btn-danger"><i class="bi bi-trash"></i></a>
 
       </td>
 
