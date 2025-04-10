@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Reparation;
+use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Http\Request;
 
 class ReparationController extends Controller
@@ -73,5 +74,11 @@ class ReparationController extends Controller
         return redirect('/liste-reparation');
 
 
+    }
+
+    public function telechargement(){
+        $reparations = Reparation::all(); 
+        $pdf = Pdf::loadView('Reparations.pdf', compact('reparations'));
+        return $pdf->download('doc_reparation.pdf');
     }
 }

@@ -7,6 +7,8 @@
 </div>
 <div class="mt-3">
 <a href="/ajouter-reparation" class=" btn btn-primary">Ajouter un reparation</a>
+<a href="/telechargerPdf" class="btn"><i class="bi bi-download"></i></a>
+
 </div>
 <table class="table table-striped">
   <thead>

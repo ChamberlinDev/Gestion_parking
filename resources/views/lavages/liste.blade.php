@@ -3,6 +3,8 @@
 <div class=" container mb-3 mt-3">
 <h3 class="text-center">Liste des lavages</h3>
 <a href="/ajouter-lavage" class="btn btn-primary">Enregistrer un lavage</a>
+<a href="/telechargerPdf" class="btn"><i class="bi bi-download"></i></a>
+
 </div>
 <table class="table table-striped">
   <thead>

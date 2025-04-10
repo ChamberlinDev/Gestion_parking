@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Lavage;
+use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Http\Request;
 
 class LavageController extends Controller
@@ -67,5 +68,11 @@ class LavageController extends Controller
         $lavage->update();
         return redirect('/liste-lavage');
 
+    }
+
+    public function telechargement(){
+        $lavages = Lavage::all(); 
+        $pdf = Pdf::loadView('lavages.doc_lavage', compact('lavages'));
+        return $pdf->download('doc_lavage.pdf');
     }
 }

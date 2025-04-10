@@ -64,12 +64,12 @@
                     <!-- <p class="text-center small">Enter your username & password to login</p> -->
                   </div>
 
-                  <form class="row g-3 needs-validation" novalidate>
-
+                  <form class="row g-3 needs-validation" novalidate action="/login_save" method="POST">
+                    @csrf
                     <div class="col-12">
                       <label for="yourUsername" class="form-label">nom utilisateur</label>
                       <div class="input-group has-validation">
-                        <input type="text" name="nom_utilisateur" class="form-control" id="nom_utilisateur" required>
+                        <input type="text" name="name" class="form-control" id="name" required>
                         <div class="invalid-feedback">Entrer votre nom utilisateur.</div>
                       </div>
                     </div>

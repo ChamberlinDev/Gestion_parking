@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
@@ -28,6 +29,21 @@ class AuthController extends Controller
         $user->password=$request->password;
 
         $user->save();
-        return redirect('/accueil');
+        return redirect('/');
     }
+    public function login(Request $request)
+    {
+        $request->validate([
+            'name' => 'required',
+            'password' => 'required',
+        ]);
+    
+        $credentials = $request->only('name', 'password');
+    
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
+            return redirect('/accueil'); 
+        }
+    }
+    
 }
