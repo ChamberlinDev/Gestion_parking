@@ -16,6 +16,9 @@ Route::get('/',[AuthController::class, 'loginForm']);
 Route::get('/registre',[AuthController::class, 'registreForm']);
 Route::post('/registre_save', [AuthController::class, 'registre']);
 Route::post('/login_save', [AuthController::class, 'login']);
+Route::get('/voirprofil', [AuthController::class, 'voirprofil']);
+Route::get('/edit', [AuthController::class, 'edit_form']);
+Route::post('/modif_profil', [AuthController::class, 'modif_profil']);
 
 Route::get('/ajouter-lavage', [LavageController::class, 'ajoutForm']);
 Route::post('/ajout_save',[LavageController::class,'ajout_save']);
