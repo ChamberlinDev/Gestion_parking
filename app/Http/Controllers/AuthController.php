@@ -72,4 +72,11 @@ class AuthController extends Controller
         $user->save();
     return redirect('voirprofil');
     }
+
+    public function suppression_deconnexion(){
+        $user=Auth::user();
+        $user->delete();
+        return redirect('/');
+
+    }
 }

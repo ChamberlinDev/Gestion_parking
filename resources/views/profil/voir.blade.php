@@ -35,7 +35,7 @@
             </a>
         </li>
         <li>
-            <a href="">
+            <a href="/suppression-deconnexion">
                 <span class="text-danger">Supprimer le compte</span>
             </a>
         </li>
