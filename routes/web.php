@@ -24,7 +24,7 @@ Route::get('/suppression-deconnexion', [AuthController::class, 'suppression_deco
 Route::get('/ajouter-lavage', [LavageController::class, 'ajoutForm']);
 Route::post('/ajout_save',[LavageController::class,'ajout_save']);
 Route::get('/liste-lavage', [LavageController::class, 'liste']);
-Route::get('/modif_form/{id}', [LavageController::class, 'modif_form']);
+Route::get('/modif_lavage/{id}', [LavageController::class, 'modif_form']);
 Route::post('/update_lavage/{id}', [LavageController::class,'update_lavage']);
 Route::get('/telechargerPdf', [LavageController::class, 'telechargement']);
 

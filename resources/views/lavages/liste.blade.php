@@ -33,7 +33,7 @@
       <td>{{ $lavage->heure }}</td>
       <td>{{ $lavage->montant }}</td>
       <td>
-      <a class="btn btn-warning" href="/modif_form/{{$lavage->id}}"><i class="bi bi-pencil"></i></a>
+      <a class="btn btn-warning" href="/modif_lavage/{{$lavage->id}}"><i class="bi bi-pencil"></i></a>
       <a class="btn btn-danger" href=""><i class="bi bi-trash"></i></a>
 
       </td>
