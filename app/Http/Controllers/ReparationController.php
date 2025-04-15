@@ -81,4 +81,11 @@ class ReparationController extends Controller
         $pdf = Pdf::loadView('Reparations.pdf', compact('reparations'));
         return $pdf->download('doc_reparation.pdf');
     }
+
+    public function suppression_r($id){
+        $reparation=Reparation::find($id);
+        $reparation->delete();
+        return redirect('/liste-reparation');
+
+    }
 }

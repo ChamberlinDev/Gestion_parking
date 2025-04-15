@@ -75,4 +75,10 @@ class LavageController extends Controller
         $pdf = Pdf::loadView('lavages.doc_lavage', compact('lavages'));
         return $pdf->download('doc_lavage.pdf');
     }
+
+    public function delete_lavage($id){
+        $lavage=Lavage::find($id);
+        $lavage->delete();
+        return redirect('/liste-lavage');
+    }
 }

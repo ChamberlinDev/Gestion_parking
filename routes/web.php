@@ -27,6 +27,9 @@ Route::get('/liste-lavage', [LavageController::class, 'liste']);
 Route::get('/modif_lavage/{id}', [LavageController::class, 'modif_form']);
 Route::post('/update_lavage/{id}', [LavageController::class,'update_lavage']);
 Route::get('/telechargerPdf', [LavageController::class, 'telechargement']);
+Route::get('/delete_lavage');
+
+
 
 
 Route::get('/liste-reparation', [ReparationController::class, 'liste']);
@@ -34,6 +37,7 @@ Route::post('/reparation_save',[ReparationController::class,'ajout_save']);
 Route::get('/ajouter-reparation', [ReparationController::class, 'ajoutForm']);
 Route::get('/modif_form/{id}', [ReparationController::class,'modif_form']);
 Route::post('/update_reparation/{id}', [ReparationController::class, 'update_reparation']);
+Route::get('/delete_repa/{id}', [ReparationController::class, 'suppression_r'] );
 Route::get('/telechargerPdf', [ReparationController::class, 'telechargement']);
 
 

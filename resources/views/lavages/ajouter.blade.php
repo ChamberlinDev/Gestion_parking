@@ -54,7 +54,7 @@
             </div>
         </div>
         <button type="submit" class="btn btn-primary mt-3 mx-2">Enregistrer</button>
-        <a class="btn btn-danger mt-3 mx-2" href="/liste">Annuler</a>
+        <a class="btn btn-danger mt-3 mx-2" href="//liste-lavage">Annuler</a>
     </form>
 </div>
 @endsection
