@@ -40,7 +40,7 @@
       <td>{{ $reparation->montant }}</td>
       <td>
       <a class="btn btn-warning" href="/modif_form/{{$reparation->id}}"><i class="bi bi-pencil"></i></a>
-      <a class="btn btn-danger" href=""><i class="bi bi-trash"></i></a>
+      <a class="btn btn-danger" href="/liste-reparation"><i class="bi bi-trash"></i></a>
 
       </td>
 

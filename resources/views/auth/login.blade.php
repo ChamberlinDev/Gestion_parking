@@ -41,6 +41,7 @@
 <body>
 
   <main>
+ 
     <div class="container">
 
       <section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
@@ -55,6 +56,12 @@
                 </a>
               </div>End Logo -->
 
+              @if(session('error'))
+               <div class="alert alert-danger">
+              {{ session('error') }}
+              </div>
+              @endif
+                </div>
               <div class="card mb-3">
 
                 <div class="card-body">

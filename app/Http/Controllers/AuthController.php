@@ -54,6 +54,7 @@ class AuthController extends Controller
             $request->session()->regenerate();
             return redirect('/accueil'); 
         }
+        return redirect()->back()->with('error' , 'Mauvais nom utilisateur ou mot de passe');
     }
     public function modif_profil(Request $request){
         $user=Auth::user();
