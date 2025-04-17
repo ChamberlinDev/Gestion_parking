@@ -56,12 +56,6 @@
                 </a>
               </div>End Logo -->
 
-              @if(session('error'))
-               <div class="alert alert-danger">
-              {{ session('error') }}
-              </div>
-              @endif
-                </div>
               <div class="card mb-3">
 
                 <div class="card-body">
